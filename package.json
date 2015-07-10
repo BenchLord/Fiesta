@@ -1,0 +1,29 @@
+{
+  "name": "Fiesta",
+  "version": "0.0.0",
+  "description": "Event Mangagement System",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BenchLord/Fiesta.git"
+  },
+  "author": "Brandon Bench",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenchLord/Fiesta/issues"
+  },
+  "homepage": "https://github.com/BenchLord/Fiesta",
+  "dependencies": {
+    "angular": "^1.4.2",
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.3",
+    "mongoose": "^4.0.6",
+    "ui-router": "0.0.1"
+  }
+}

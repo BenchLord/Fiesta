@@ -1,0 +1,13 @@
+doctype html
+head(lang="en")
+	title Fiesta
+	script(src='node/angular/angular.js')
+	script(src='node/ui-router/angular-ui-router.js')
+	script(src='public/Javascripts/Fiesta.js')
+body(ng-app="Fiesta")
+	h1 Fiesta
+	div(ui-view='')
+	p
+		a(ui-sref="homepage") 1st Page
+		=' '
+		a(ui-sref="otherpage") 2nd Page
