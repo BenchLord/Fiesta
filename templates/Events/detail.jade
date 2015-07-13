@@ -1,0 +1,13 @@
+h1 Event: #{Event.name}
+br
+p Organizer Info:
+	div(style="margin-left: 20px") 
+		p 	Name: #{Event.organizer.name}
+		p 	Phone: #{Event.organizer.phone}
+		p 	Email: #{Event.organizer.email}
+
+p Where: #{Event.where}
+p When: #{Event.startDate} at #{Event.startTime} to #{Event.endDate} at #{Event.endTime}
+
+form(method="post" action="/api/#{Event._id}?_method=delete")
+	input(type="submit" value="Delete Event")

@@ -1,7 +1,12 @@
 var express = require('express');
-// need a controller
+var EventCtrl = require('../Controllers/eventController.js')
 
 var router = express.Router();
-//api crud routes here
+
+router.get('/api(.:format)?', EventCtrl.index);
+router.get('/api/new', EventCtrl.new);
+router.post('/api(.:format)?', EventCtrl.create);
+router.get('/api/(:_id)(.:format)?', EventCtrl.read);
+router.delete('/api/(:_id)(.:format)?', EventCtrl.destroy);
 
 module.exports = router;

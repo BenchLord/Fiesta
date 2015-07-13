@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 	res.render('index');
 });
 
-app.use('/api', require('./Routes/api.js'));
+app.use('/', require('./Routes/api.js'));
 
 var server = app.listen('1337', function(){
 	console.log('Fiesta Running on 127.0.0.1:1337');

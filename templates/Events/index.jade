@@ -1,0 +1,9 @@
+h1 All Events
+if Events
+	each Event in Events
+		a(href="/api/#{Event._id}") #{Event.name}
+		br
+	else
+		p There aren't any Events, why dont you make one!
+		br
+a(href="/api/new") Add New Event		
