@@ -63,6 +63,12 @@ var EventCtrl = {
 				}
 			})
 		})
+	},
+
+	update: function(req, res){
+		Event.findOne({_id: req.params._id}, function(err, Event){
+			console.log(Event);
+		})
 	}
 }
 

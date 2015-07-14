@@ -3,9 +3,15 @@ var mongoose = require('mongoose');
 var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 
-mongoose.connect('mongodb://neon/FiestaDB', function(){
-	console.log("Connected to mongo database: FiestaDB")
+mongoose.connect('mongodb://fiestauser:fiestapassword@ds047722.mongolab.com:47722/fiesta', function(err){
+	if (err){
+		console.log(err);
+	} else {
+		console.log("Connected to mongo database: fiesta")		
+	}
 })
+
+app.set('port', (process.env.PORT)|| 1337)
 
 var app = express()
 
@@ -25,6 +31,6 @@ app.get('/', function(req, res){
 
 app.use('/', require('./Routes/api.js'));
 
-var server = app.listen('1337', function(){
+var server = app.listen(app.get('port'), function(){
 	console.log('Fiesta Running on 127.0.0.1:1337');
 });
