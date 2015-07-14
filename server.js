@@ -11,9 +11,9 @@ mongoose.connect('mongodb://fiestauser:fiestapassword@ds047722.mongolab.com:4772
 	}
 })
 
-app.set('port', (process.env.PORT)|| 1337)
-
 var app = express()
+
+app.set('port', (process.env.PORT)|| 1337)
 
 app.use(methodOverride('_method'));
 app.use(bodyParser.json());
