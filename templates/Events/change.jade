@@ -2,39 +2,41 @@ h1 Editing Event: #{Event.name}
 form(method="post" action="/api/#{Event._id}?_method=put")
 	label(for="name") Event Name
 	br
-	input(type="text" name="name" value="#{Event.name}") 
+	input(type="text" name="name" value="#{Event.name}" required) 
 	br
 	label(for="organizerName") Organizer Name
 	br
-	input(type="text" name="organizerName" value="#{Event.organizerName}")
+	input(type="text" name="organizerName" value="#{Event.organizer.name}" required)
 	br
 	label(for="organizerPhone") Organizer Phone
 	br
-	input(type="text" name="organizerPhone" value="#{Event.organizerPhone}") 
+	input(type="text" name="organizerPhone" value="#{Event.organizer.phone}" required) 
 	br
 	label(for="organizerEmail") Organizer Email
 	br
-	input(type="email" name="organizerEmail" value="#{Event.organizerEmail}")
+	input(type="email" name="organizerEmail" value="#{Event.organizer.email}" required)
 	br
 	label(for="where") Where
 	br
-	input(type="text" name="where" value="#{Event.where}")
+	input(type="text" name="where" value="#{Event.where}" required)
 	br
 	label(for="start") Start Date
 	br
-	input(type="date" name="startDate" value="#{Event.startDate}")
+	input(type="date" name="startDate" value="#{Event.startDate}" required)
 	br
 	label(for="startTime") Start Time
 	br
-	input(type="time" name="startTime" value="#{Event.startTime}") 
+	input(type="time" name="startTime" value="#{Event.startTime}" required) 
 	br 
 	label(for="endDate") End Date
 	br
-	input(type="date" name="endDate" value="#{Event.endDate}")
+	input(type="date" name="endDate" value="#{Event.endDate}" required)
 	br
 	label(for="endTime") End Time
 	br
-	input(type="time" name="endTime" value="#{Event.endTime}")
+	input(type="time" name="endTime" value="#{Event.endTime}" required)
 	br
 	br
-	input(type="Submit" value="Create Event")
+	input(type="Submit" value="Update")
+	br
+	a(href="/api/#{Event._id}") Back

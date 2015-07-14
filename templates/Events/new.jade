@@ -2,39 +2,39 @@ h1 New Event
 form(method="post" action="/api")
 	label(for="name") Event Name
 	br
-	input(type="text" name="name") 
+	input(type="text" name="name" required) 
 	br
 	label(for="organizerName") Organizer Name
 	br
-	input(type="text" name="organizerName")
+	input(type="text" name="organizerName" required)
 	br
 	label(for="organizerPhone") Organizer Phone
 	br
-	input(type="text" name="organizerPhone") 
+	input(type="text" name="organizerPhone" required) 
 	br
 	label(for="organizerEmail") Organizer Email
 	br
-	input(type="email" name="organizerEmail")
+	input(type="email" name="organizerEmail" required)
 	br
 	label(for="where") Where
 	br
-	input(type="text" name="where")
+	input(type="text" name="where" required)
 	br
 	label(for="start") Start Date
 	br
-	input(type="date" name="startDate")
+	input(type="date" name="startDate" required)
 	br
 	label(for="startTime") Start Time
 	br
-	input(type="time" name="startTime")
+	input(type="time" name="startTime" required)
 	br 
 	label(for="endDate") End Date
 	br
-	input(type="date" name="endDate")
+	input(type="date" name="endDate" required)
 	br
 	label(for="endTime") End Time
 	br
-	input(type="time" name="endTime")
+	input(type="time" name="endTime" required)
 	br
 	br
 	input(type="Submit" value="Create Event")

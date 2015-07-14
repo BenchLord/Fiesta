@@ -9,6 +9,11 @@ p Organizer Info:
 p Where: #{Event.where}
 p When: #{Event.startDate} at #{Event.startTime} to #{Event.endDate} at #{Event.endTime}
 
+p
+	a(href="/api/#{Event._id}/change") Edit Event
+
 form(method="post" action="/api/#{Event._id}?_method=delete")
 	input(type="submit" value="Delete Event")
-a(href="/change")
+
+p
+	a(href="/api") All Events
