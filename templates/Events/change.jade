@@ -1,5 +1,5 @@
 h1 Editing Event: #{Event.name}
-form(method="post" action="/api/#{Event._id}?_method=update")
+form(method="post" action="/api/#{Event._id}?_method=put")
 	label(for="name") Event Name
 	br
 	input(type="text" name="name" value="#{Event.name}") 
