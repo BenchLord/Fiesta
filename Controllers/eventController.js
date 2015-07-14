@@ -32,11 +32,11 @@ var EventCtrl = {
 			startTime: req.body.startTime,
 			endDate: req.body.endDate,
 			endTime: req.body.endTime
-		}).save(function(err, restaurant){
+		}).save(function(err, Event){
 			if (req.params.format == "json"){
-				res.json(restaurant);
+				res.json(Event);
 			} else {
-				res.redirect('/api');
+				res.redirect('/api/' + Event._id);
 			}
 		})
 	},
@@ -65,9 +65,35 @@ var EventCtrl = {
 		})
 	},
 
+	change: function(req, res){
+		Event.findOne({_id: req.params._id}, function(err, Event){
+			res.render('Events/edit', {
+				Event: Event
+			})
+		})
+	},
+
 	update: function(req, res){
 		Event.findOne({_id: req.params._id}, function(err, Event){
-			console.log(Event);
+			Event.update('Event', {
+				name: req.body.name,
+				organizer: {
+					name: req.body.organizerName,
+					phone: req.body.organizerPhone,
+					email: req.body.organizerEmail
+				},
+				where: req.body.where,
+				startDate: req.body.startDate,
+				startTime: req.body.startTime,
+				endDate: req.body.endDate,
+				endTime: req.body.endTime
+			}, function(err, Event){
+				if (req.params.format == "json"){
+					res.json(Event);
+				} else {
+					res.redirect('/api/' + Event._id)
+				}
+			})
 		})
 	}
 }

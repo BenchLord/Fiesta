@@ -1,0 +1,40 @@
+h1 Editing Event: #{Event.name}
+form(method="post" action="/api/#{Event._id}?_method=update")
+	label(for="name") Event Name
+	br
+	input(type="text" name="name" value="#{Event.name}") 
+	br
+	label(for="organizerName") Organizer Name
+	br
+	input(type="text" name="organizerName" value="#{Event.organizerName}")
+	br
+	label(for="organizerPhone") Organizer Phone
+	br
+	input(type="text" name="organizerPhone" value="#{Event.organizerPhone}") 
+	br
+	label(for="organizerEmail") Organizer Email
+	br
+	input(type="email" name="organizerEmail" value="#{Event.organizerEmail}")
+	br
+	label(for="where") Where
+	br
+	input(type="text" name="where" value="#{Event.where}")
+	br
+	label(for="start") Start Date
+	br
+	input(type="date" name="startDate" value="#{Event.startDate}")
+	br
+	label(for="startTime") Start Time
+	br
+	input(type="time" name="startTime" value="#{Event.startTime}") 
+	br 
+	label(for="endDate") End Date
+	br
+	input(type="date" name="endDate" value="#{Event.endDate}")
+	br
+	label(for="endTime") End Time
+	br
+	input(type="time" name="endTime" value="#{Event.endTime}")
+	br
+	br
+	input(type="Submit" value="Create Event")
