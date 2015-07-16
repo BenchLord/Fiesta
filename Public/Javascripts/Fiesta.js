@@ -16,7 +16,7 @@
 				controllerAs: 'newCtrl',
 				templateUrl: 'templates/new.html'
 			}).state('detail', {
-				url: '/detail',
+				url: '/detail/:_id',
 				controller: 'DetailCtrl',
 				controllerAs: 'detailCtrl',
 				templateUrl: 'templates/detail.html'
