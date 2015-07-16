@@ -6,14 +6,14 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var session = require('express-session');
 
-mongoose.connect('mongodb://mongodb.cs.dixie.edu/fiestadb');
-// mongoose.connect('mongodb://fiestauser:fiestapassword@ds047722.mongolab.com:47722/fiesta', function(err){
-// 	if (err){
-// 		console.log(err);
-// 	} else {
-// 		console.log("Connected to Mongolab database: fiesta")		
-// 	}
-// })
+//mongoose.connect('mongodb://mongodb.cs.dixie.edu/fiestadb');
+mongoose.connect('mongodb://fiestauser:fiestapassword@ds047722.mongolab.com:47722/fiesta', function(err){
+	if (err){
+		console.log(err);
+	} else {
+		console.log("Connected to Mongolab database: fiesta")		
+	}
+})
 
 var app = express()
 
