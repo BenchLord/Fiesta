@@ -6,7 +6,7 @@ var EventCtrl = {
 	index: function(req, res){
 		Event.find({}, function(err, events){
 			if(req.params.format == "json"){
-				res.json(Events);
+				res.json(events);
 			} else {
 				res.render('Events/index', {
 					Events: events

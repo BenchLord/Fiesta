@@ -1,16 +1,25 @@
 (function(){
 
-	angular.module('Fiesta', ['ui.router']).config([
+	angular.module('Fiesta', ['ui.router', 'ngResource']).config([
 		'$stateProvider',
 		'$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider){
 			$urlRouterProvider.otherwise('/');
-			$stateProvider.state('homepage', {
+			$stateProvider.state('list', {
 				url: '/',
-				templateUrl: 'public/templates/ng.html'
-			}).state('otherpage', {
-				url: '/otherpage',
-				templateUrl: 'public/templates/other.html'
+				controller: 'EventCtrl',
+				controllerAs: 'eventCtrl',
+				templateUrl: 'templates/list.html'
+			}).state('new', {
+				url: '/new',
+				controller: 'NewCtrl',
+				controllerAs: 'newCtrl',
+				templateUrl: 'templates/new.html'
+			}).state('detail', {
+				url: '/detail',
+				controller: 'DetailCtrl',
+				controllerAs: 'detailCtrl',
+				templateUrl: 'templates/detail.html'
 			})
 		}
 	])
