@@ -7,9 +7,9 @@ head(lang="en")
 	script(src='Javascripts/Fiesta.js')
 	script(src="Javascripts/Event.fct.js")
 	script(src="Javascripts/Event.ctrl.js")
-	script(src="Javascripts/EventDetail.ctrl.js")
 	script(src="Javascripts/New.ctrl.js")
-body(ng-app="Fiesta")
+	script(src="Javascripts/Detail.ctrl.js")
+body(ng-app="Fiesta" ng-init="sessionUser = #{JSON.stringify(user)}")
 	h1 Fiesta
 	div(ui-view='')
 	p

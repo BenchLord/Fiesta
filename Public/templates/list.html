@@ -1,5 +1,10 @@
-<h3>All Events</h3>
-<div ng-repeat="event in eventCtrl.events">
-	<a ui-sref="detail(event)">{{event.name}}</a>
+<div ng-show="eventCtrl.sessionUser">
+	<h3>All Events</h3>
+	<div ng-repeat="event in eventCtrl.events">
+		<a ui-sref="detail(event)">{{event.name}}</a>
+	</div>
+</div>
+<div ng-hide="eventCtrl.sessionUser">
+	<a href="/sessions/new">You need to log in</a>
 </div>
 

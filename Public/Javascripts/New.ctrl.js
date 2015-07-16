@@ -7,6 +7,7 @@
 		'$scope',
 		function(Event, $rootScope, $state, $scope){
 			this.newEvent = new Event();
+			this.sessionUser = $scope.sessionUser;
 
 			this.addEvent = function(){
 				this.newEvent.$save();
