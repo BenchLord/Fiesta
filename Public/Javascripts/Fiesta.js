@@ -1,6 +1,6 @@
 (function(){
 
-	angular.module('Fiesta', ['ui.router', 'ngResource']).config([
+	angular.module('Fiesta', ['ui.router', 'ngResource', 'angular-loading-bar']).config([
 		'$stateProvider',
 		'$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider){
