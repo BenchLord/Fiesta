@@ -9,8 +9,8 @@
 			var id = $stateParams._id;
 
 			var ctrl = this;
-			this.ctrl = Event.get({event_id: id}).$promise.then(function(event){
-				console.log(ctrl.event);
+			Event.get({event_id: id}, function(event){
+				ctrl.event = event;
 			})
 		}
 	])

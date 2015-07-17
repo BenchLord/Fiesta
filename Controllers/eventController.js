@@ -44,7 +44,7 @@ var EventCtrl = {
 	read: function(req, res){
 		Event.findOne({_id: req.params._id}, function(err, event){
 			if(req.params.format == "json"){
-				res.json(Event);
+				res.json(event);
 			} else {
 				res.render('Events/detail', {
 					Event: event
