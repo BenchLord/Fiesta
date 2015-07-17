@@ -1,1 +1,6 @@
 <h3>Event: {{ detailCtrl.event.name }}</h3>
+<p>Where: {{detailCtrl.event.where }}</p>
+<p>When: {{detailCtrl.event.startDate}} at {{detailCtrl.event.startTime}} to {{detailCtrl.event.endDate}} at {{detailCtrl.event.endTime}}</p>
+<p>Organized by: {{ detailCtrl.event.organizer.name }}</p>
+<p>Email: {{detailCtrl.event.organizer.email}}</p>
+<p>Phone: {{detailCtrl.event.organizer.phone}}</p>

@@ -11,6 +11,7 @@
 			var ctrl = this;
 			Event.get({event_id: id}, function(event){
 				ctrl.event = event;
+				console.log(ctrl.event)
 			})
 		}
 	])
