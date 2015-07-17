@@ -1,5 +1,5 @@
-doctype html
-head(lang="en")
+extends Layout
+block title
 	title Fiesta
 	script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js')
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js')
@@ -9,10 +9,10 @@ head(lang="en")
 	script(src="Javascripts/Event.ctrl.js")
 	script(src="Javascripts/New.ctrl.js")
 	script(src="Javascripts/Detail.ctrl.js")
-body(ng-app="Fiesta" ng-init="sessionUser = #{JSON.stringify(user)}")
-	h1 Fiesta
-	div(ui-view='')
-	p
-		a(ui-sref="list") All Events
-		= ' '
-		a(ui-sref="new") New Event
+block content		
+	div(ng-app="Fiesta" ng-init="sessionUser = #{JSON.stringify(user)}")
+		div(ui-view='')
+		p
+			a(ui-sref="list") All Events
+			= ' '
+			a(ui-sref="new") New Event

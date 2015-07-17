@@ -1,28 +1,33 @@
-h1 New User
-form(method="post" action="/users")
-	p
-		label First Name:
-		br
-		input(type='text' name="firstName" required)
-	p
-		label Last Name:
-		br
-		input(type="text" name="lastName" required)
-	p
-		label Username: 
-		br
-		input(type="text" name="username" required)
-	p
-		label Password:
-		br
-		input(type="password" name="password" required)
-	p
-		label Email:
-		br
-		input(type="text" name="email" required)
-	p
-		label Phone:
-		br
-		input(type="text" name="phone" required)
-	p
-		input(type="submit" value="Register")
+extends ../Layout
+
+block title
+	title New User
+block content
+	h3 New User
+	form(method="post" action="/users")
+		p
+			label First Name:
+			br
+			input(type='text' name="firstName" required)
+		p
+			label Last Name:
+			br
+			input(type="text" name="lastName" required)
+		p
+			label Username: 
+			br
+			input(type="text" name="username" required)
+		p
+			label Password:
+			br
+			input(type="password" name="password" required)
+		p
+			label Email:
+			br
+			input(type="text" name="email" required)
+		p
+			label Phone:
+			br
+			input(type="text" name="phone" required)
+		p
+			input(type="submit" value="Register")

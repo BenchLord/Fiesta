@@ -1,15 +1,19 @@
-h3 Sign In
-form(method='post' action='/sessions')
-	p
-		label Username:
-		br
-		input(type="text" name='username' required)
-	p
-		label Password:
-		br
-		input(type='text' name='password' required)
-	p
-		input(type="submit" value="Sign In")
-p dont have an account? 
-	span
-		a(href="/users/new") Sign up
+extends ../Layout
+block title
+	title Log In
+block content
+	h3 Sign In
+	form(method='post' action='/sessions')
+		p
+			label Username:
+			br
+			input(type="text" name='username' required)
+		p
+			label Password:
+			br
+			input(type='text' name='password' required)
+		p
+			input(type="submit" value="Sign In")
+	p dont have an account? 
+		span
+			a(href="/users/new") Sign up
