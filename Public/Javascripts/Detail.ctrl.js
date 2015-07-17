@@ -6,11 +6,11 @@
 		'$stateParams',
 		function(Event, $scope, $stateParams){
 			this.sessionUser = $scope.sessionUser;
-
 			var id = $stateParams._id;
+
 			var ctrl = this;
-			this.event = Event.get({event_id: id}).$promise.then(function(event){
-				console.log(this.event);
+			this.ctrl = Event.get({event_id: id}).$promise.then(function(event){
+				console.log(ctrl.event);
 			})
 		}
 	])
