@@ -1,43 +1,67 @@
+<h3>New Event</h3>
+
 <div ng-show="newCtrl.sessionUser">
-	<h3>New Event</h3>
 	<form ng-submit="newCtrl.addEvent()">
-		<label for="name">Name:</label>
-		<br>
-		<input type="text" ng-model="newCtrl.newEvent.name" name="name" required>
-		<br>
-		<label for="organizerName">Organizer Name:</label>
-		<br>
-		<input type="text" ng-model="newCtrl.newEvent.organizer.name" name="organizerName" required>
-		<br>
-		<label for="organizerPhone">Organizer Phone:</label>
-		<br>
-		<input type="text" ng-model="newCtrl.newEvent.organizer.phone" name="organizerPhone" required>
-		<br>
-		<label for="organizerEmail">Organizer Email:</label>
-		<br>
-		<input type="email" ng-model="newCtrl.newEvent.organizer.email" name="organizerEmail" required>
-		<br>
-		<label for="where">Where: </label>
-		<br>
-		<input type="text" ng-model="newCtrl.newEvent.where" name="where" required>
-		<br>
-		<label for="startDate">Start Date:</label>
-		<br>
-		<input type="date" ng-model="newCtrl.newEvent.startDate" name="startDate" required>
-		<br>
-		<label for="startTime">Start Time:</label>
-		<br>
-		<input type="time" ng-model="newCtrl.newEvent.startTime" name="startTime" required>
-		<br>
-		<label for="endDate">End Date:</label>
-		<br>
-		<input type="date" ng-model="newCtrl.newEvent.endDate" name="endDate" required>
-		<br>
-		<label for="endTime">End Time:</label>
-		<br>
-		<input type="time" ng-model="newCtrl.newEvent.endTime" name="endTime" required>
-		<br>
-		<input type="submit" value="Create">
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Event Name:</label>
+				<input type="text" class="form-control" placeholder="Event Name" ng-model="newCtrl.newEvent.name" required>
+			</div>			
+		</div>
+
+		<div class="form-group">
+			<input type="hidden" class="form-control" placeholder="Organizer Name" ng-model="newCtrl.newEvent.organizer.name" required>
+		</div>
+
+		<div class="form-group">
+			<input type="hidden" class="form-control" placeholder="Organizer Phone" ng-model="newCtrl.newEvent.organizer.phone" required>
+		</div>
+
+		<div class="form-group">
+			<input type="hidden" class="form-control" placeholder="Organizer Email" ng-model="newCtrl.newEvent.organizer.email" required>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Where:</label>
+				<input type="text" class="form-control" placeholder="Where" ng-model="newCtrl.newEvent.where" required>
+			</div>			
+		</div>
+
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label>Start Date:</label>
+				<input type="date" class="form-control" placeholder="Start Date" ng-model="newCtrl.newEvent.startDate" required>
+			</div>			
+		</div>
+
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label>Start Time:</label>
+				<input type="time" class="form-control" placeholder="Start Time" ng-model="newCtrl.newEvent.startTime" required>
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<label>End Date:</label>
+			<div class="form-group">
+				<input type="date" class="form-control" placeholder="End Date" ng-model="newCtrl.newEvent.endDate" required>
+			</div>			
+		</div>
+
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label>End Time:</label>
+				<input type="time" class="form-control" placeholder="End Time" ng-model="newCtrl.newEvent.endTime" required>
+			</div>			
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<input type="submit" class="form-control btn btn-primary" value="Create">
+			</div>			
+		</div>
 	</form>
 </div>
 <div ng-hide="newCtrl.sessionUser">

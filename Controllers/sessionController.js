@@ -5,6 +5,11 @@ var SessionController = {
 
 	create: function(req, res){
 		res.redirect('/');
+	},
+
+	destroy: function(req, res){
+		req.session.destroy();
+		res.redirect('/');
 	}
 }
 

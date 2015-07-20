@@ -10,6 +10,7 @@ block title
 	script(src="Javascripts/Event.ctrl.js")
 	script(src="Javascripts/New.ctrl.js")
 	script(src="Javascripts/Detail.ctrl.js")
+
 block content		
 	div(ng-app="Fiesta" ng-init="sessionUser = #{JSON.stringify(user)}")
 		div(ui-view='')
@@ -17,3 +18,7 @@ block content
 			a(ui-sref="list") All Events
 			= ' '
 			a(ui-sref="new") New Event
+			
+			if user
+				form(method="post" action="/sessions?_method=delete")
+					input.btn.btn-primary(type="submit" value="Sign Out")

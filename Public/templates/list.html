@@ -1,5 +1,5 @@
-<div ng-show="eventCtrl.sessionUser">
-	<h3>All Events</h3>
+<h3>All Events</h3>
+<div ng-show="eventCtrl.sessionUser">	
 	<div ng-repeat="event in eventCtrl.events">
 		<a ui-sref="detail(event)">{{event.name}}</a>
 	</div>
