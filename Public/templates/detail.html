@@ -1,8 +1,9 @@
-<h3>Event: {{detailCtrl.event.name}}</h3>
-<p>Where: {{detailCtrl.event.where}}</p>
-<p>Start: {{detailCtrl.startDate}} at {{detailCtrl.startTime}}</p>
-<p>End: {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
-<p>Organized by: {{ detailCtrl.event.organizer.name }}</p>
+<h2>{{detailCtrl.event.name}}</h2>
+<h4 style="margin-top: -8px">{{detailCtrl.event.where}}</h4>
+<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+
+<h3>Organizer Info</h3>
+<p>Name: {{ detailCtrl.event.organizer.name }}</p>
 <p>Email: {{detailCtrl.event.organizer.email}}</p>
 <p>Phone: {{detailCtrl.event.organizer.phone}}</p>
 
