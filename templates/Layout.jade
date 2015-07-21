@@ -1,11 +1,31 @@
 doctype html
 html(lang="en")
 	head
+		meta(charset="UTF-8")
 		link(rel="stylesheet" href="Styles/main.css")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
 		block title
 	body
-		//- Header and nav should go here
+		nav.navbar.navbar-default
+			div.container-fluid
+				div.navbar-header
+					a.navbar-brand(href="/") Fiesta
+				div.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li
+							a(href="/#/") All Events
+						li
+							a(href="/#/new") New Event
+						li
+					ul.nav.navbar-nav.navbar-right
+						li
+							if user
+								a Signed in as #{user.username}
+								li
+									form(method="POST" action="/sessions?_method=delete")
+										input.btn.btn-warning(style="margin-top: 7px" type="submit" value="Sign Out")
+							else
+								a(style="margin: 0px;" href="/sessions/new") Sign In
 		div.container
 			block content
 		//- Footer should go here

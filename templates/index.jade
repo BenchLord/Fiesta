@@ -13,12 +13,17 @@ block title
 
 block content		
 	div(ng-app="Fiesta" ng-init="sessionUser = #{JSON.stringify(user)}")
-		div(ui-view='')
-		p
-			a(ui-sref="list") All Events
-			= ' '
-			a(ui-sref="new") New Event
-			
-			if user
-				form(method="post" action="/sessions?_method=delete")
-					input.btn.btn-primary(type="submit" value="Sign Out")
+		if user
+			div(ui-view='')
+		else
+			div.jumbotron
+				h1 Prepare to Fiesta!
+				p.
+					The search is over! Fiesta is a slick, hassle-free way to manage all of your events.
+					We pride ourselves in providing you with an extremely easy yet powerful way to create, manage,
+					and attend events whether they're small neighborhood BBQ's or huge company get-togethers.
+					So what are you waiting for? It's time to Fiesta!
+
+				a(href="users/new")
+					button.btn.btn-success.btn-lg.btn-block Sign me up!
+

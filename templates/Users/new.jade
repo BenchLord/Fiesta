@@ -1,34 +1,38 @@
 extends ../Layout
 
 block title
-	title New User
+	title New Fiesta Account
 block content
 	h3 New User
 	form(method="post" action="/users")
-		p
-			label First Name:
-			br
-			input(type='text' name="firstName" required)
-		p
-			label Last Name:
-			br
-			input(type="text" name="lastName" required)
-		p
-			label Username: 
-			br
-			input(type="text" name="username" required)
-		p
-			label Password:
-			br
-			input(type="password" name="password" required)
-		p
-			label Email:
-			br
-			input(type="text" name="email" required)
-		p
-			label Phone:
-			br
-			input(type="text" name="phone" required)
-		p
-			input(type="submit" value="Register")
-	a(href="/") Back
+		div.col-xs-6
+			div.form-group
+				label First Name:
+				input.form-control(type='text' name="firstName" required)
+		div.col-xs-6
+			div.form-group
+				label Last Name:
+				input.form-control(type="text" name="lastName" required) 
+		div.col-xs-12
+			div.form-group
+				label Username: 
+				input.form-control(type="text" name="username" required)
+		div.col-xs-6
+			div.form-group
+				label Password:
+				input.form-control(type="password" name="password" required)
+		div.col-xs-6
+			div.form-group
+				label Confirm Password:
+				input.form-control(type="password" name="cpassword" required)
+		div.col-xs-6
+			div.form-group
+				label Email:
+				input.form-control(type="email" name="email" required)
+		div.col-xs-6
+			div.form-group
+				label Phone:
+				input.form-control(type="tel" name="phone" required)
+		div.col-xs-12
+			div.form-group
+			input.form-control.btn.btn-primary(type="submit" value="Register")

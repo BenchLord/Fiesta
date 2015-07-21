@@ -11,6 +11,7 @@
 
 			var ctrl = this;
 			this.addEvent = function(){
+				console.log(ctrl.newEvent);
 				ctrl.newEvent.$save();
 				$rootScope.$broadcast('Event Created', ctrl.newEvent);
 				$state.go('list');

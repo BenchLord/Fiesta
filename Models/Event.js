@@ -8,10 +8,8 @@ var schema = new mongoose.Schema({
 		email: String,
 	},
 	where: String,
-	startDate: String,
-	startTime: String,
-	endDate: String,
-	endTime: String
+	startDate: Date,
+	endDate: Date,
 });
 
 var Event = mongoose.model('Event', schema);

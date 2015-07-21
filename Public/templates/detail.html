@@ -1,6 +1,9 @@
-<h3>Event: {{ detailCtrl.event.name }}</h3>
-<p>Where: {{detailCtrl.event.where }}</p>
-<p>When: {{detailCtrl.event.startDate}} at {{detailCtrl.event.startTime}} to {{detailCtrl.event.endDate}} at {{detailCtrl.event.endTime}}</p>
+<h3>Event: {{detailCtrl.event.name}}</h3>
+<p>Where: {{detailCtrl.event.where}}</p>
+<p>Start: {{detailCtrl.startDate}} at {{detailCtrl.startTime}}</p>
+<p>End: {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
 <p>Organized by: {{ detailCtrl.event.organizer.name }}</p>
 <p>Email: {{detailCtrl.event.organizer.email}}</p>
 <p>Phone: {{detailCtrl.event.organizer.phone}}</p>
+
+<button class="btn btn-danger" ng-click="detailCtrl.deleteEvent()">Delete Event</button>
