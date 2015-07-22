@@ -1,20 +1,20 @@
-	<div class="event-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-10">
-					<h2>{{detailCtrl.event.name}}</h2>
-					<h4>{{detailCtrl.event.where}}</h4>
-					<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <br><b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+<div class="event-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<h2>{{detailCtrl.event.name}}</h2>
+				<h4>{{detailCtrl.event.where}}</h4>
+				<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <br><b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+			</div>
+			<div class="col-sm-2 pull-right" style="padding-right:0;margin-top:25px;">
+				<div ng-hide="detailCtrl.attending">
+					<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
 				</div>
-				<div class="col-sm-2 pull-right" style="padding-right:0;margin-top:25px;">
-					<div ng-hide="detailCtrl.attending">
-						<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
-					</div>
 
-					<div ng-show="detailCtrl.attending">
-						<p>You're going to this event</p>
-					</div>
+				<div ng-show="detailCtrl.attending">
+					<p>You're going to this event</p>
 				</div>
+			</div>
 		</div>
 	</div>
 </div>

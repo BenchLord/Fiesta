@@ -1,8 +1,9 @@
 <div class="container">
 	<h3>All Events</h3>
 	<div ng-show="eventCtrl.sessionUser">
-		<div ng-repeat="event in eventCtrl.events">
-			<a ui-sref="detail(event)">{{event.name}}</a>
+		<div ng-repeat="event in eventCtrl.events" class="event col-xs-4">
+			<a ui-sref="detail(event)">{{event.name}}</a><br>
+			<em>at {{event.where}}</em>
 		</div>
 	</div>
 	<div ng-hide="eventCtrl.sessionUser">
