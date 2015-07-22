@@ -10,6 +10,7 @@ var schema = new mongoose.Schema({
 	where: String,
 	startDate: Date,
 	endDate: Date,
+	attendees: []
 });
 
 var Event = mongoose.model('Event', schema);

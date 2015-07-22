@@ -79,6 +79,7 @@ var EventCtrl = {
 				phone: req.body.organizerPhone,
 				email: req.body.organizerEmail
 			},
+			attendees: req.body.attendees,
 			where: req.body.where,
 			startDate: req.body.startDate,
 			startTime: req.body.startTime,

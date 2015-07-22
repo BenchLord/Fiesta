@@ -20,8 +20,10 @@
   "dependencies": {
     "angular-loading-bar": "^0.8.0",
     "body-parser": "^1.13.2",
+    "connect-flash": "^0.1.1",
     "express": "^4.13.1",
     "express-session": "^1.11.3",
+    "flash": "^1.1.0",
     "jade": "^1.11.0",
     "method-override": "^2.3.3",
     "mongoose": "^4.0.6",

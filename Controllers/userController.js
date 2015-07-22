@@ -23,7 +23,7 @@ var UserController = {
 			}
 			});			
 		} else {
-			res.send('password fields don\'t match')
+			res.send('Password fields don\'t match');
 		}
 	}
 };

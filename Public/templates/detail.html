@@ -1,10 +1,30 @@
-<h2>{{detailCtrl.event.name}}</h2>
-<h4 style="margin-top: -8px">{{detailCtrl.event.where}}</h4>
-<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+<div style="float: left">
 
-<h3>Organizer Info</h3>
-<p>Name: {{ detailCtrl.event.organizer.name }}</p>
-<p>Email: {{detailCtrl.event.organizer.email}}</p>
-<p>Phone: {{detailCtrl.event.organizer.phone}}</p>
+	<h2>{{detailCtrl.event.name}}</h2>
+	<h4 style="margin-top: -8px">{{detailCtrl.event.where}}</h4>
+	<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
 
-<button class="btn btn-danger" ng-click="detailCtrl.deleteEvent()">Delete Event</button>
+	<h3>Organizer Info</h3>
+	<p>Name: {{detailCtrl.event.organizer.name}}</p>
+	<p>Email: {{detailCtrl.event.organizer.email}}</p>
+	<p>Phone: {{detailCtrl.event.organizer.phone}}</p>
+
+	<h4>Attendees:</h4>
+	<div ng-repeat="attendee in detailCtrl.event.attendees">
+		{{attendee.firstName}} {{attendee.lastName}} - <i>{{attendee.phone}}</i>
+	</div>
+
+	<br>
+	<!-- This should only show up if you are the event organizer -->
+	<button class="btn btn-danger" ng-click="detailCtrl.deleteEvent()">Delete Event</button>
+	<button class="btn btn-warning" ng-click="detailCtrl.editEvent()">(wip) Edit Event</button>
+	
+</div>
+
+<div ng-hide="detailCtrl.attending">
+	<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
+</div>
+
+<div ng-show="detailCtrl.attending" style="float: right">	
+	<p>You're going to this event</p>
+</div>
