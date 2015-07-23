@@ -3,36 +3,42 @@ extends ../Layout
 block title
 	title New Fiesta Account
 block content
-	h3 New Fiesta Account
-	form(method="post" action="/users")
-		div.col-xs-6
-			div.form-group
-				label First Name:
-				input.form-control(type='text' name="firstName" required)
-		div.col-xs-6
-			div.form-group
-				label Last Name:
-				input.form-control(type="text" name="lastName" required) 
-		div.col-xs-12
-			div.form-group
-				label Username: 
-				input.form-control(type="text" name="username" required)
-		div.col-xs-6
-			div.form-group
-				label Password:
-				input.form-control(type="password" name="password" required)
-		div.col-xs-6
-			div.form-group
-				label Confirm Password:
-				input.form-control(type="password" name="cpassword" required)
-		div.col-xs-6
-			div.form-group
-				label Email:
-				input.form-control(type="email" name="email" required)
-		div.col-xs-6
-			div.form-group
-				label Phone:
-				input.form-control(type="tel" name="phone" required)
-		div.col-xs-12
-			div.form-group
-			input.form-control.btn.btn-primary(type="submit" value="Register")
+	div.container
+		div.row
+			div.col-xs-12
+				h3 New Fiesta Account
+		form(method="post" action="/users")
+			div.row
+				div.col-xs-6
+					div.form-group
+						label First Name:
+						input.form-control(type='text' name="firstName" required)
+				div.col-xs-6
+					div.form-group
+						label Last Name:
+						input.form-control(type="text" name="lastName" required) 
+			div.row
+				div.col-xs-12
+					div.form-group
+						label Username: 
+						input.form-control(type="text" name="username" required)
+				div.col-xs-6
+					div.form-group
+						label Password:
+						input.form-control(type="password" name="password" required)
+				div.col-xs-6
+					div.form-group
+						label Confirm Password:
+						input.form-control(type="password" name="cpassword" required)
+			div.row
+				div.col-xs-6
+					div.form-group
+						label Email:
+						input.form-control(type="email" name="email" required)
+				div.col-xs-6
+					div.form-group
+						label Phone:
+						input.form-control(type="tel" name="phone" required)
+				div.col-xs-12
+					div.form-group
+					input.form-control.btn.btn-primary(type="submit" value="Register")

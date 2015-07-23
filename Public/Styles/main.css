@@ -1,0 +1,53 @@
+html, body, p, div, span {
+  font-family: 'proxima-nova', 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.jumbotron {
+  margin-top: -20px;
+  border-radius: 0;
+  background-color: #6CC8D7;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.event {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  margin-right: 15px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.event-header {
+  background-color: #6CC8D7;
+  color: #fff;
+  margin-top: -25px;
+  padding: 25px 0;
+  margin-bottom: 25px;
+}
+
+.btn-signup {
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 15px;
+  width: 250px;
+  transition: all .2s ease;
+  color: #444;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-right: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.btn-signup-hollow {
+  color: #fff;
+  background-color: transparent;
+}
+  .btn-signup-hollow:hover {
+    color: #444;
+    background-color: #fff;
+  }

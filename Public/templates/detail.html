@@ -1,9 +1,25 @@
-<div style="float: left">
+<div class="event-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<h2>{{detailCtrl.event.name}}</h2>
+				<h4>{{detailCtrl.event.where}}</h4>
+				<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <br><b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+			</div>
+			<div class="col-sm-2 pull-right" style="padding-right:0;margin-top:25px;">
+				<div ng-hide="detailCtrl.attending">
+					<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
+				</div>
 
-	<h2>{{detailCtrl.event.name}}</h2>
-	<h4 style="margin-top: -8px">{{detailCtrl.event.where}}</h4>
-	<p><b>From</b>: {{detailCtrl.startDate}} at {{detailCtrl.startTime}} <b>To</b> {{detailCtrl.endDate}} at {{detailCtrl.endTime}}</p>
+				<div ng-show="detailCtrl.attending">
+					<p>You're going to this event</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
+<div class="container">
 	<h3>Organizer Info</h3>
 	<p>Name: {{detailCtrl.event.organizer.name}}</p>
 	<p>Email: {{detailCtrl.event.organizer.email}}</p>
@@ -18,13 +34,4 @@
 	<!-- This should only show up if you are the event organizer -->
 	<button class="btn btn-danger" ng-click="detailCtrl.deleteEvent()">Delete Event</button>
 	<button class="btn btn-warning" ng-click="detailCtrl.editEvent()">(wip) Edit Event</button>
-	
-</div>
-
-<div ng-hide="detailCtrl.attending">
-	<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
-</div>
-
-<div ng-show="detailCtrl.attending" style="float: right">	
-	<p>You're going to this event</p>
 </div>

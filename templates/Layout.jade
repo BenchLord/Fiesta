@@ -2,30 +2,40 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
-		link(rel="stylesheet" href="Styles/main.css")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+			
+		script(src="//use.typekit.net/mnx2aqz.js")
+		script.
+			try{Typekit.load();}catch(e){}
+		
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
+		link(rel="stylesheet" href="Styles/navbar.css")
+		link(rel="stylesheet" href="Styles/main.css")
 		block title
 	body
-		nav.navbar.navbar-default
+		div.stripe
+		nav.navbar.navbar-default.navbar-static-top
 			div.container
-				div.navbar-header
-					a.navbar-brand(href="/") Fiesta
-				div.collapse.navbar-collapse
-					ul.nav.navbar-nav
-						li
-							a(href="/#/") All Events
-						li
-							a(href="/#/new") New Event
-						li
-					ul.nav.navbar-nav.navbar-right
-						li
-							if user
-								a Signed in as #{user.username}
+				div.row
+					div.col-xs-12
+						div.navbar-header
+							a.navbar-brand(href="/") Fiesta
+						div.collapse.navbar-collapse
+							ul.nav.navbar-nav
 								li
-									form(method="POST" action="/sessions?_method=delete")
-										input.btn.btn-warning(style="margin-top: 7px" type="submit" value="Sign Out")
-							else
-								a(style="margin: 0px;" href="/sessions/new") Sign In
-		div.container
-			block content
+									a(href="/#/") All Events
+								li
+									a(href="/#/new") New Event
+								li
+							ul.nav.navbar-nav.navbar-right
+								li
+									if user
+										a Signed in as #{user.username}
+										li
+											form(method="POST" action="/sessions?_method=delete")
+												input.btn.btn-warning(style="margin-top: 7px" type="submit" value="Sign Out")
+									else
+										a(style="margin: 0px;" href="/sessions/new") Sign In
+		//- div.container
+		block content
 		//- Footer should go here

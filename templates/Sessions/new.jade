@@ -2,20 +2,25 @@ extends ../Layout
 block title
 	title Sign In
 block content
-	h3 Sign In
-	form(method='post' action='/sessions')
-		div.col-xs-12
-			div.form-group
-				label Username:
-				input.form-control(type="text" name='username' required)
-		div.col-xs-12
-			div.form-group
-				label Password:
-				input.form-control(type='password' name='password' required)
-		div.col-xs-12
-			div.form-group
-				input.btn.btn-success.form-control(type="submit" value="Sign In")
-	
-	div.col-xs-12
-		a(href="/users/new")
-			button.btn.btn-primary.btn-block Sign Up
+	div.container
+		div.row
+			div.col-xs-12
+				h3 Sign In
+		form(method='post' action='/sessions')
+			div.row
+				div.col-xs-12
+					div.form-group
+						label Username:
+						input.form-control(type="text" name='username' required)
+			div.row
+				div.col-xs-12
+					div.form-group
+						label Password:
+						input.form-control(type='password' name='password' required)
+			div.row
+				div.col-xs-6
+					div.form-group
+						input.btn.btn-success.form-control(type="submit" value="Sign In")
+				div.col-xs-6
+					a(href="/users/new")
+						button.btn.btn-primary.btn-block Sign Up
