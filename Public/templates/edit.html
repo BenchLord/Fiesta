@@ -1,0 +1,59 @@
+<div class="container">	
+	<h3>Editing Event: {{editCtrl.event.name}}</h3>
+	<form ng-submit="editCtrl.update()">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Event Name:</label>
+					<input type="text" class="form-control" placeholder="Event Name" ng-model="editCtrl.event.name" required>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Where:</label>
+				<input type="text" class="form-control" placeholder="Where" ng-model="editCtrl.event.where" required>
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<div class="form-group">
+				<label>Start Date and Time:</label>
+				<input type="datetime-local" class="form-control" placeholder="Start Date" ng-model="editCtrl.event.startDate" required>
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<label>End Date and Time:</label>
+			<div class="form-group">
+				<input type="datetime-local" class="form-control" placeholder="End Date" ng-model="editCtrl.event.endDate" required>
+			</div>
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Organizer Name:</label>
+				<input type="text" class="form-control" placeholder="Organizer Name" ng-model="editCtrl.event.organizer.name" required>
+			</div>	
+		</div>
+		
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Organizer Phone:</label>
+				<input type="text" class="form-control" placeholder="Organizer Phone" ng-model="editCtrl.event.organizer.phone" required>
+			</div>	
+		</div>
+		
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Organizer Email:</label>
+				<input type="email" class="form-control" placeholder="Organizer Email" ng-model="editCtrl.event.organizer.email" required>
+			</div>	
+		</div>
+
+		<div class="col-xs-12">
+			<div class="form-group">
+				<input type="submit" class="form-control btn btn-custom" value="Update">
+			</div>
+		</div>
+	</form>
+</div>

@@ -20,6 +20,11 @@
 				controller: 'DetailCtrl',
 				controllerAs: 'detailCtrl',
 				templateUrl: 'templates/detail.html'
+			}).state('edit', {
+				url: '/edit/:_id',
+				controller: 'EditCtrl',
+				controllerAs: 'editCtrl',
+				templateUrl: 'templates/edit.html'
 			})
 		}
 	])

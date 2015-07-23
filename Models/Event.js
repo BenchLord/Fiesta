@@ -3,9 +3,18 @@ var mongoose = require('mongoose');
 var schema = new mongoose.Schema({
 	name: String,
 	organizer: {
-		name: String,
-		phone: String,
-		email: String,
+		name: {
+			type: String,
+			default: 'Unkown'
+		},
+		phone: {
+			type: String,
+			default: 'Unkown'
+		},
+		email: {
+			type: String,
+			default: 'Unkown'
+		}
 	},
 	where: String,
 	startDate: Date,

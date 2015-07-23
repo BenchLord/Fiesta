@@ -8,7 +8,7 @@
 			</div>
 			<div class="col-sm-2 pull-right" style="padding-right:0;margin-top:25px;">
 				<div ng-hide="detailCtrl.attending">
-					<button class="btn btn-lg btn-success" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
+					<button class="btn btn-lg btn-warning" style="float: right" ng-click="detailCtrl.attend()">I'm in!</button>
 				</div>
 
 				<div ng-show="detailCtrl.attending">
@@ -27,11 +27,11 @@
 
 	<h4>Attendees:</h4>
 	<div ng-repeat="attendee in detailCtrl.event.attendees">
-		{{attendee.firstName}} {{attendee.lastName}} - <i>{{attendee.phone}}</i>
+		{{attendee.firstName}} {{attendee.lastName}}
 	</div>
 
 	<br>
 	<!-- This should only show up if you are the event organizer -->
 	<button class="btn btn-danger" ng-click="detailCtrl.deleteEvent()">Delete Event</button>
-	<button class="btn btn-warning" ng-click="detailCtrl.editEvent()">(wip) Edit Event</button>
+	<button class="btn btn-warning" ng-click="detailCtrl.editEvent()">Edit Event</button>
 </div>

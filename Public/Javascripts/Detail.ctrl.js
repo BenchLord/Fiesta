@@ -52,7 +52,15 @@
 			this.attend = function(){
 				Event.get({event_id: id}, function(event){
 					event.attendees.push(ctrl.sessionUser);
-					Event.update({event_id: id}, event);
+					Event.update({event_id: id}, event, function(event){ 
+						$state.go($state.current, {}, {reload: true});
+					});
+				})
+			};
+
+			this.editEvent = function(){
+				Event.get({event_id: id}, function(event){
+					$state.go('edit', event);
 				})
 			}
 		}

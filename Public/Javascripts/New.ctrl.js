@@ -10,11 +10,11 @@
 			this.newEvent = new Event();
 			var ctrl = this;
 
+
 			this.addEvent = function(){
 				ctrl.newEvent.$save();
 				$rootScope.$broadcast('Event Created', ctrl.newEvent);
 				$state.go('list');
-				// ctrl.newEvent = new Event();
 			}
 		}
 	]);

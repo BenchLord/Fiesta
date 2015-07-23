@@ -1,4 +1,5 @@
 extends ../Layout
+
 block title
 	title Sign In
 block content
@@ -20,7 +21,6 @@ block content
 			div.row
 				div.col-xs-6
 					div.form-group
-						input.btn.btn-success.form-control(type="submit" value="Sign In")
+						input.btn.btn-warning.form-control(type="submit" value="Sign In")
 				div.col-xs-6
-					a(href="/users/new")
-						button.btn.btn-primary.btn-block Sign Up
+					a.btn.btn-custom.btn-block(href="/users/new") Sign Up

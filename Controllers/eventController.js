@@ -23,9 +23,9 @@ var EventCtrl = {
 		new Event({
 			name: req.body.name,
 			organizer: {
-				name: req.body.organizerName,
-				phone: req.body.organizerPhone,
-				email: req.body.organizerEmail
+				name: req.user.firstName + " " + req.user.lastName,
+				phone: req.user.phone,
+				email: req.user.email
 			},
 			where: req.body.where,
 			startDate: req.body.startDate,
@@ -75,9 +75,9 @@ var EventCtrl = {
 		Event.findOneAndUpdate({_id: req.params._id},{
 			name: req.body.name,
 			organizer: {
-				name: req.body.organizerName,
-				phone: req.body.organizerPhone,
-				email: req.body.organizerEmail
+				name: req.body.organizer.name,
+				phone: req.body.organizer.phone,
+				email: req.body.organizer.email
 			},
 			attendees: req.body.attendees,
 			where: req.body.where,
